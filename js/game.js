@@ -139,7 +139,7 @@ var update = function (modifier) {
 		newPosition.y = hero.y;
 		newPosition.x = hero.x - hero.speed * modifier;
 		// Check if newPosition is valid taking into account terrain limit and stones. If it is, then move
-		if (newPosition.y >= 32 && !(areTouching(newPosition,stone)))
+		if (newPosition.x >= 32 && !(areTouching(newPosition,stone)))
 		{
 			hero.x = newPosition.x;
 		}
@@ -150,7 +150,7 @@ var update = function (modifier) {
 		newPosition.y = hero.y;
 		newPosition.x = hero.x + hero.speed * modifier;
 		// Check if newPosition is valid taking into account terrain limit and stones. If it is, then move
-		if (newPosition.x <= canvas.height-64 && !(areTouching(newPosition,stone)))
+		if (newPosition.x <= canvas.height-32 && !(areTouching(newPosition,stone)))
 		{
 			hero.x = newPosition.x;
 		}
